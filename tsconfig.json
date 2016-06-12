@@ -3,8 +3,9 @@
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "target": "es6",
-        "module": "amd",
+        "module": "commonjs",
         "outDir": "bin",
+        "noImplicitAny": true,
         "sourceMap": true
     }
 }
