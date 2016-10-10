@@ -7,12 +7,12 @@ class Player {
     public draw = 0;
     
     constructor(public name: string,
-                private middleValue: number) {
+                private skill: number) {
         
     }
     
     public rollDice(): number {
-        return Math.floor(Math.random() * 40 - 20 + this.middleValue);
+        return Math.floor(Math.random() * 40 - 20 + this.skill);
     }
     
     public addGame(opponent: number, result: GameResult) {
@@ -91,8 +91,8 @@ let game = new SinglePlayerGame();
 
 console.log("Init...");
 for(let i = 10; i > 0; --i) {
-    let m = i * 4
-    game.addPlayer(new Player("Player[" + i + "]", m))
+    let skill = i * 4
+    game.addPlayer(new Player("Player[" + i + "]", skill))
 }
 console.log("Start...");
 for(let i = 100; i > 0; --i) {
